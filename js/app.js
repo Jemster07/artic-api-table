@@ -1,5 +1,8 @@
+// Initialize DataTables
 $(document).ready( function () {
-    $('#myTable').DataTable();
+    $('#artTable').DataTable();
 } );
 
-console.log("test");
+// Ajax
+const url = "https://api.artic.edu/api/v1/artworks";
+
