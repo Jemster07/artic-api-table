@@ -2,7 +2,7 @@ $(document).ready(function () {
     
     var table = $('#artTable').DataTable({
         ajax: {
-            url: 'https://api.artic.edu/api/v1/artworks',
+            url: 'https://api.artic.edu/api/v1/artworks?fields=id,title,date_display,artist_title,artist_display,classification_title,medium_display,dimensions,description,credit_line,copyright_notice,image_id,thumbnail',
             dataSrc: 'data',
         },
         columns: [
@@ -25,9 +25,8 @@ $(document).ready(function () {
         document.getElementById('modal-year').innerHTML = selection.date_display;
         document.getElementById('modal-artist').innerHTML = selection.artist_display;
         document.getElementById('modal-materials').innerHTML = selection.medium_display;
-        document.getElementById('modal-description').innerHTML = selection.description;
         document.getElementById('modal-dimensions').innerHTML = selection.dimensions;
-        document.getElementById('modal-medium').innerHTML = selection.medium_display;
+        document.getElementById('modal-description').innerHTML = selection.description;
         document.getElementById('modal-collection').innerHTML = selection.credit_line;
         document.getElementById('modal-copyright').innerHTML = selection.copyright_notice;
 
