@@ -1,5 +1,4 @@
-$(document).ready(function () {
-    
+$(document).ready(function () {    
     var table = $('#artTable').DataTable({
         ajax: {
             url: 'https://api.artic.edu/api/v1/artworks?fields=id,title,date_display,artist_title,artist_display,classification_title,medium_display,dimensions,description,credit_line,copyright_notice,image_id,thumbnail',
@@ -15,12 +14,22 @@ $(document).ready(function () {
 
     $('tbody').on('click', 'tr', function () {
         var selection = table.row(this).data();
-        var artModal = new bootstrap.Modal(document.getElementById('artModal'));
-        
+        var artModal = new bootstrap.Modal(document.getElementById('artModal'));       
         var image = document.getElementById('modal-image');
-        image.src = `https://www.artic.edu/iiif/2/${selection.image_id}/full/843,/0/default.jpg`;
-        image.alt = selection.thumbnail.alt_text;
-        
+
+        if (selection.image_id === null) {
+            image.src = "./default-image_0.jpeg";
+        } else {
+            image.src = `https://www.artic.edu/iiif/2/${selection.image_id}/full/843,/0/default.jpg`;
+
+            if (selection.thumbnail === null) {
+                image.alt = "";
+            } else {
+                image.alt = selection.thumbnail.alt_text;
+            }
+        }
+
+        document.getElementById('modal-id').innerHTML = selection.id;
         document.getElementById('modal-title').innerHTML = `"${selection.title}"`;
         document.getElementById('modal-year').innerHTML = selection.date_display;
         document.getElementById('modal-artist').innerHTML = selection.artist_display;
@@ -32,5 +41,4 @@ $(document).ready(function () {
 
         artModal.show();
     });
-
 });
