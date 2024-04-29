@@ -14,20 +14,22 @@ $(document).ready(function () {
     });
 
     $('tbody').on('click', 'tr', function () {
-        var data = table.row(this).data();
-        
+        var selection = table.row(this).data();
         var artModal = new bootstrap.Modal(document.getElementById('artModal'));
-        var title = document.getElementById('modal-title');
-        var artist = document.getElementById('modal-artist');
-        var origin = document.getElementById('modal-origin');
-        var year = document.getElementById('modal-year');
-        var materials = document.getElementById('modal-materials');
-        var imageURL = document.getElementById('modal-imageURL');
-        var imageALT = document.getElementById('modal-imageALT');
-        var description = document.getElementById('modal-description');
-        var dimensions = document.getElementById('modal-dimensions');
-        var medium = document.getElementById('modal-medium');
-        var collection = document.getElementById('modal-collection');
+        
+        var image = document.getElementById('modal-image');
+        image.src = `https://www.artic.edu/iiif/2/${selection.image_id}/full/843,/0/default.jpg`;
+        image.alt = selection.thumbnail.alt_text;
+        
+        document.getElementById('modal-title').innerHTML = `"${selection.title}"`;
+        document.getElementById('modal-year').innerHTML = selection.date_display;
+        document.getElementById('modal-artist').innerHTML = selection.artist_display;
+        document.getElementById('modal-materials').innerHTML = selection.medium_display;
+        document.getElementById('modal-description').innerHTML = selection.description;
+        document.getElementById('modal-dimensions').innerHTML = selection.dimensions;
+        document.getElementById('modal-medium').innerHTML = selection.medium_display;
+        document.getElementById('modal-collection').innerHTML = selection.credit_line;
+        document.getElementById('modal-copyright').innerHTML = selection.copyright_notice;
 
         artModal.show();
     });
