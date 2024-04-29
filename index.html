@@ -9,51 +9,87 @@
     </head>
 
     <body>
-        <h3>Art Institute of Chicago</h3>
-
-        <table id="artTable" class="display">
-            <thead>
-                <tr>
-                    <th>Artist</th>
-                    <th>Title</th>
-                    <th>Medium</th>
-                    <th>Year</th>      
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Artist</td>
-                    <td>Title</td>
-                    <td>Medium</td>
-                    <td>Year</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <div class="modal fade" id="artModal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="modal-title">Modal title</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="container align-items-center">
+            <div class="row text-center">
+                <div class="col">
+                    <h3>Art Institute of Chicago</h3>
                 </div>
-                <div class="modal-body">
-                  <div id="modal-id" hidden>id</div>
-                  <img id="modal-image" src="" alt="">
-                  <div id="modal-year">Year</div>
-                  <div id="modal-artist">Artist</div>
-                  <div id="modal-materials">Materials Used</div>
-                  <div id="modal-dimensions">Dimensions</div>
-                  <div id="modal-description">Description</div>
-                  <div id="modal-collection">Credit Line/Collection</div>
-                  <div id="modal-copyright">Copyright</div>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-              </div>
             </div>
-          </div>          
+
+            <div class="row">
+                <div class="col">                    
+                    <table id="artTable" class="display">
+                        <thead>
+                            <tr>
+                                <th>Artist</th>
+                                <th>Title</th>
+                                <th>Medium</th>
+                                <th>Year</th>      
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Artist</td>
+                                <td>Title</td>
+                                <td>Medium</td>
+                                <td>Year</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>         
+        </div>
+
+        <div class="container align-items-center">
+            <div class="row text-center">
+                <div class="col">
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+
+                </div>
+
+                <div class="col">
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+
+                </div>
+            </div>
+        </div>
+        
+                    <div class="modal fade" id="artModal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="modal-title">Modal title</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                <div id="modal-id" hidden>id</div>
+                                <img id="modal-image" src="" alt="">
+                                <div id="modal-year">Year</div>
+                                <div id="modal-artist">Artist</div>
+                                <div id="modal-materials">Materials Used</div>
+                                <div id="modal-dimensions">Dimensions</div>
+                                <div id="modal-description">Description</div>
+                                <div id="modal-collection">Credit Line/Collection</div>
+                                <div id="modal-copyright">Copyright</div>
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>          
+                
+
 
         <script src="./jquery-3.7.1.min.js"></script>
         <script src="https://cdn.datatables.net/2.0.5/js/dataTables.js"></script>
