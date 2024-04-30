@@ -1,7 +1,7 @@
 $(document).ready(function () {    
     var table = $('#artTable').DataTable({
         ajax: {
-            url: 'https://api.artic.edu/api/v1/artworks?fields=id,title,date_display,artist_title,artist_display,classification_title,medium_display,dimensions,description,credit_line,copyright_notice,image_id,thumbnail',
+            url: 'https://api.artic.edu/api/v1/artworks?fields=id,title,date_display,artist_title,artist_display,classification_title,medium_display,dimensions,description,credit_line,copyright_notice,image_id,thumbnail&limit=100',
             dataSrc: 'data',
         },
         columns: [
@@ -31,7 +31,7 @@ $(document).ready(function () {
 
         document.getElementById('modal-id').innerHTML = selection.id;
         document.getElementById('modal-title').innerHTML = `"${selection.title}"`;
-        document.getElementById('modal-year').innerHTML = selection.date_display;
+        document.getElementById('modal-year').innerHTML = `cir. ${selection.date_display}`;
         document.getElementById('modal-artist').innerHTML = selection.artist_display;
         document.getElementById('modal-materials').innerHTML = selection.medium_display;
         document.getElementById('modal-dimensions').innerHTML = selection.dimensions;

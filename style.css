@@ -1,3 +1,15 @@
 h3 {
     margin: 50px 0px;
 }
+
+select {
+    margin-right: 8px;
+}
+
+#modal-description {
+    padding-top: 15px;
+}
+
+#modal-year {
+    padding-top: 5px;
+}
