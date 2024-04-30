@@ -1,7 +1,7 @@
 $(document).ready(function () {    
     var table = $('#artTable').DataTable({
         ajax: {
-            url: 'https://api.artic.edu/api/v1/artworks?fields=id,title,date_display,artist_title,artist_display,classification_title,medium_display,dimensions,description,credit_line,copyright_notice,image_id,thumbnail&limit=100',
+            url: 'https://api.artic.edu/api/v1/artworks?fields=id,title,date_display,artist_title,artist_display,classification_title,medium_display,dimensions,description,credit_line,copyright_notice,image_id,thumbnail&limit=50',
             dataSrc: 'data',
         },
         columns: [
@@ -18,12 +18,12 @@ $(document).ready(function () {
         var image = document.getElementById('modal-image');
 
         if (selection.image_id === null) {
-            image.src = "./default-image.jpeg";
+            image.src = "./img/default-image.jpeg";
         } else {
             image.src = `https://www.artic.edu/iiif/2/${selection.image_id}/full/843,/0/default.jpg`;
 
             if (selection.thumbnail === null) {
-                image.alt = "";
+                image.alt = "placeholder";
             } else {
                 image.alt = selection.thumbnail.alt_text;
             }

@@ -1,20 +1,19 @@
-h3 {
-    margin: 50px 0px;
+body {
+    margin: 3rem 0rem;
 }
 
 select {
-    margin-right: 8px;
+    margin-right: .5rem;
 }
 
 #modal-description {
-    padding-top: 15px;
+    padding-top: 1rem;
 }
 
 #modal-year {
-    padding-top: 5px;
+    padding-top: .3rem;
 }
 
-img#modal-image {
-    max-width: 100%;
-    max-height: 100%;
+table.table.display.dataTable tr {
+    cursor: pointer;
 }
