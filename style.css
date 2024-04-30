@@ -13,3 +13,8 @@ select {
 #modal-year {
     padding-top: 5px;
 }
+
+img#modal-image {
+    max-width: 100%;
+    max-height: 100%;
+}

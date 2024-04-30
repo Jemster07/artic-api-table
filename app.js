@@ -20,7 +20,7 @@ $(document).ready(function () {
         if (selection.image_id === null) {
             image.src = "./default-image.jpeg";
         } else {
-            image.src = `https://www.artic.edu/iiif/2/${selection.image_id}/full/400,/0/default.jpg`;
+            image.src = `https://www.artic.edu/iiif/2/${selection.image_id}/full/843,/0/default.jpg`;
 
             if (selection.thumbnail === null) {
                 image.alt = "";
