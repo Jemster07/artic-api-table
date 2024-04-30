@@ -18,7 +18,7 @@ $(document).ready(function () {
         var image = document.getElementById('modal-image');
 
         if (selection.image_id === null) {
-            image.src = "./default-image_0.jpeg";
+            image.src = "./default-image.jpeg";
         } else {
             image.src = `https://www.artic.edu/iiif/2/${selection.image_id}/full/400,/0/default.jpg`;
 
